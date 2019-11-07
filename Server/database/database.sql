@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2019 a las 19:14:33
+-- Tiempo de generación: 07-11-2019 a las 23:00:51
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `test`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `login_password`
+--
+
+CREATE TABLE `login_password` (
+  `login` varchar(50) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `login_password`
+--
+
+INSERT INTO `login_password` (`login`, `password`) VALUES
+('isfernan', 'trabajarmata123'),
+('mbahstou', 'trabajarduele456'),
+('otros', 'manolo_45'),
+('pepe_federico', 'identidad000'),
+('una_mujer', 'botellas_rotas456');
 
 -- --------------------------------------------------------
 
@@ -102,6 +124,12 @@ INSERT INTO `voluntario` (`id`, `especialidad`) VALUES
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `login_password`
+--
+ALTER TABLE `login_password`
+  ADD PRIMARY KEY (`login`);
 
 --
 -- Indices de la tabla `piso`
