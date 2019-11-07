@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2019 a las 18:56:16
+-- Tiempo de generación: 07-11-2019 a las 19:14:33
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -37,6 +37,7 @@ CREATE TABLE `piso` (
   `num_voluntarios` int(255) NOT NULL,
   `horario` varchar(1000) NOT NULL,
   `lavadora` tinyint(2) NOT NULL,
+  `plancha` tinyint(2) NOT NULL,
   `ducha` tinyint(2) NOT NULL,
   `cocina` tinyint(2) NOT NULL,
   `comida` tinyint(2) NOT NULL
@@ -46,11 +47,11 @@ CREATE TABLE `piso` (
 -- Volcado de datos para la tabla `piso`
 --
 
-INSERT INTO `piso` (`id`, `ciudad`, `direccion`, `aforo`, `num_usuarios`, `num_voluntarios`, `horario`, `lavadora`, `ducha`, `cocina`, `comida`) VALUES
-(1, 'madrid', 'c/camino humanes 36 6ºA', 30, 12, 4, '10:00-20:00', 0, 0, 1, 1),
-(2, 'granada', 'c/pez 34 2ºB', 14, 2, 1, '9:00-20:00', 1, 0, 0, 1),
-(3, 'granada', 'c/tiburon 125 3ºA', 12, 3, 2, '8:00-20:00', 1, 1, 1, 1),
-(4, 'barcelona', 'c/federico garcia lopez 45 bajo B', 20, 18, 4, '10:30-21:00', 0, 0, 1, 0);
+INSERT INTO `piso` (`id`, `ciudad`, `direccion`, `aforo`, `num_usuarios`, `num_voluntarios`, `horario`, `lavadora`, `plancha`, `ducha`, `cocina`, `comida`) VALUES
+(1, 'madrid', 'c/camino humanes 36 6ºA', 30, 12, 4, '10:00-20:00', 0, 0, 0, 1, 1),
+(2, 'granada', 'c/pez 34 2ºB', 14, 2, 1, '9:00-20:00', 1, 0, 0, 0, 1),
+(3, 'granada', 'c/tiburon 125 3ºA', 12, 3, 2, '8:00-20:00', 1, 0, 1, 1, 1),
+(4, 'barcelona', 'c/federico garcia lopez 45 bajo B', 20, 18, 4, '10:30-21:00', 0, 0, 0, 1, 0);
 
 -- --------------------------------------------------------
 
