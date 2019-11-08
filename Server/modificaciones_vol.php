@@ -13,9 +13,10 @@ if(isset($_GET['id'])){
     $ducha = $GET['ducha'];
     $cocina = $GET['cocina'];
     $comida = $GET['comida'];
+    $accesibilidad = $GET['accesibilidad']
     $resultado = $conex->query("SELECT * FROM `piso` WHERE `id` ='$id'");
     $sql = "UPDATE `piso` SET `num_usuarios`= $num_usuarios, `num_voluntarios`= $num_voluntarios, `horario` = $horario, `lavadora` = $lavadora, 
-    `plancha` = $plancha, `ducha` = $ducha, `cocina` = $cocina, `comida` = $comida WHERE `id` = $id";
+    `plancha` = $plancha, `ducha` = $ducha, `cocina` = $cocina, `comida` = $comida, `accesibilidad` = $accesibilidad WHERE `id` = $id";
     if (($conexion->query($sql))){
         die("{error: 1}");
     }
