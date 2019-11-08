@@ -1,14 +1,15 @@
 var map;
 var lista_pisos;
 var markers = [];
+var tipo;
 //Se ejecuta al empezar
 $(function () {
-	//initMap();
-	getCiudades()
+	getCiudades();
 });
 
 
 $(function () {
+	tipo = window.localStorage.getItem("tipo");
 	$("#lista_ciudades").change(function (event) {
 		var nombre_ciudad = $("#lista_ciudades option:selected").val();
 		$.ajax({
@@ -81,8 +82,8 @@ function showMap(arrayPisos) {
 			i--;
 			selectedMarker = i;
 			idPiso = lista_pisos[selectedMarker].id;
-			alert(idPiso);
 		});
+		location.href("https://localhost/HogarSolidario/CruzRoja/Interfaz/pantalla3.html");
 		alert("llega");
 	}
 }
