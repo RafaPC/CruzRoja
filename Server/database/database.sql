@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2019 a las 00:28:19
+-- Tiempo de generación: 08-11-2019 a las 01:47:57
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -30,19 +30,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login_password` (
   `login` varchar(50) NOT NULL,
-  `password` varchar(30) NOT NULL
+  `password` varchar(30) NOT NULL,
+  `tipo` tinyint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `login_password`
 --
 
-INSERT INTO `login_password` (`login`, `password`) VALUES
-('isfernan', 'trabajarmata123'),
-('mbahstou', 'trabajarduele456'),
-('otros', 'manolo_45'),
-('pepe_federico', 'identidad000'),
-('una_mujer', 'botellas_rotas456');
+INSERT INTO `login_password` (`login`, `password`, `tipo`) VALUES
+('isfernan', 'trabajarmata123', 1),
+('mbahstou', 'trabajarduele456', 1),
+('otros', 'manolo_45', 0),
+('pepe_federico', 'identidad000', 0),
+('una_mujer', 'botellas_rotas456', 1);
 
 -- --------------------------------------------------------
 
@@ -57,9 +58,9 @@ CREATE TABLE `piso` (
   `direccion` varchar(1000) NOT NULL,
   `latitud` float NOT NULL,
   `longitud` float NOT NULL,
-  `aforo` int(255) NOT NULL,
-  `num_usuarios` int(255) NOT NULL,
-  `num_voluntarios` int(255) NOT NULL,
+  `aforo` int(30) NOT NULL,
+  `num_usuarios` int(30) NOT NULL,
+  `num_voluntarios` int(30) NOT NULL,
   `horario` varchar(1000) NOT NULL,
   `lavadora` tinyint(2) NOT NULL,
   `plancha` tinyint(2) NOT NULL,
