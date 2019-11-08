@@ -1,5 +1,5 @@
 $(function () {
-	var id = 2;
+	var id = window.localStorage.getItem("idPiso");
 	$.ajax({
 		type: "get",
 		url: "http://localhost/HogarSolidario/CruzRoja/Server/centros.php",
@@ -37,7 +37,6 @@ $(function () {
 		},
 		error: function (response) {
 			alert("Error inesperado");
-			console.log(response);
 		}
 	});
 });

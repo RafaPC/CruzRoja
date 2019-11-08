@@ -67,7 +67,7 @@ function showMap(arrayPisos) {
 			},
 			title: piso.nombre,
 			map: map,
-			//icon: "iconos/house.png"
+			icon: "Iconos/Casa.png"
 		});
 		markers[i] = marker;
 		marker.addListener('click', function (event) {
@@ -82,9 +82,9 @@ function showMap(arrayPisos) {
 			i--;
 			selectedMarker = i;
 			idPiso = lista_pisos[selectedMarker].id;
+			window.localStorage.setItem("idPiso", "" + idPiso);
+			location.href = "https://localhost/HogarSolidario/CruzRoja/Client/detalles_piso.html";
 		});
-		location.href("https://localhost/HogarSolidario/CruzRoja/Interfaz/pantalla3.html");
-		alert("llega");
 	}
 }
 

@@ -13,7 +13,7 @@ function llamada() {
 			success: function (response) {
 				if (response.tipo) {
 					window.localStorage.setItem('tipo', "" + response.tipo);
-					location.href = "https://localhost/HogarSolidario/CruzRoja/Interfaz/index.html";
+					location.href = "https://localhost/HogarSolidario/CruzRoja/Client/mapa_pisos.html";
 				} else {
 					if (response.error == -1) {
 						alert("Necesitas rellenar los campos");
