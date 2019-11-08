@@ -3,7 +3,7 @@ function llamada() {
 	var password = $("#password").val();
 	if (login && password) {
 		$.ajax({
-			type: "post",
+			type: "get",
 			url: "http://localhost/HogarSolidario/CruzRoja/Server/login.php",
 			data: {
 				"login": login,
@@ -11,20 +11,21 @@ function llamada() {
 			},
 			dataType: "json",
 			success: function (response) {
-				if (response.error == 1) {
-					location.href = "https://www.google.es";
+				if (response.tipo) {
+					window.localStorage.setItem('tipo', 'hola');
+					location.href = "https://localhost/HogarSolidario/CruzRoja/Interfaz/index.html";
 				} else {
-					alert("Usuario o contraseña incorrectos");
+					if (response.error == -1) {
+						alert("Necesitas rellenar los campos");
+					} else {
+						alert("Usuario o contraseña incorrectos");
+					}
 				}
 			},
 			error: function (response, xhttpError) {
-				alert("Error");
-			},
-			complete: function (response, xhttpError) {
-				alert("Hacerlo lo ha hecho");
-				console.log(xhttpError);
 				console.log(response);
-			}
+				alert("Error inesperado");
+			},
 		});
 	} else {
 		alert("Rellena los campos");
