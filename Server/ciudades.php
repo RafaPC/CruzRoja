@@ -1,4 +1,5 @@
 <?php
+	header('Access-Control-Allow-Origin: *'); 
     $respuesta = new stdClass();
 
     require_once('conexion_server.php');
