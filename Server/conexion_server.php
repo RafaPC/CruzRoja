@@ -9,7 +9,7 @@ class ConexionBD {
     private $conex;
 
     public function __construct() {
-        $this->conex = new mysqli("localhost", "root", null, "cruzroja");
+        $this->conex = new mysqli("remotemysql.com", "pBlHUB3z4B", "R4v97XCBJb", "pBlHUB3z4B", "3306");
         if ($this->conex->connect_error) {
             die('La conexión ha fallado, error número ' . $this->conex->connect_errno . ': ' . $this->conex->connect_error);
         }
