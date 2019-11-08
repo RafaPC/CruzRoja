@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2019 a las 01:47:57
+-- Tiempo de generación: 08-11-2019 a las 06:52:21
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -66,18 +66,19 @@ CREATE TABLE `piso` (
   `plancha` tinyint(2) NOT NULL,
   `ducha` tinyint(2) NOT NULL,
   `cocina` tinyint(2) NOT NULL,
-  `comida` tinyint(2) NOT NULL
+  `comida` tinyint(2) NOT NULL,
+  `accesibilidad` tinyint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `piso`
 --
 
-INSERT INTO `piso` (`id`, `nombre`, `ciudad`, `direccion`, `latitud`, `longitud`, `aforo`, `num_usuarios`, `num_voluntarios`, `horario`, `lavadora`, `plancha`, `ducha`, `cocina`, `comida`) VALUES
-(1, 'la zapatera', 'madrid', 'c/camino humanes 36 6ºA', 40.4004, -3.66271, 30, 12, 4, '10:00-20:00', 0, 0, 0, 1, 1),
-(2, 'la tahona', 'granada', 'c/pez 34 2ºB', 37.1636, -3.59615, 14, 2, 1, '9:00-20:00', 1, 0, 0, 0, 1),
-(3, 'kilombo', 'granada', 'c/tiburon 125 3ºA', 37.1788, -3.59223, 12, 3, 2, '8:00-20:00', 1, 0, 1, 1, 1),
-(4, 'gaudi', 'barcelona', 'c/federico garcia lopez 45 bajo B', 41.3643, 2.12451, 20, 18, 4, '10:30-21:00', 0, 0, 0, 1, 0);
+INSERT INTO `piso` (`id`, `nombre`, `ciudad`, `direccion`, `latitud`, `longitud`, `aforo`, `num_usuarios`, `num_voluntarios`, `horario`, `lavadora`, `plancha`, `ducha`, `cocina`, `comida`, `accesibilidad`) VALUES
+(1, 'la zapatera', 'madrid', 'c/camino humanes 36 6ºA', 40.4004, -3.66271, 30, 12, 4, '10:00-20:00', 0, 0, 0, 1, 1, 1),
+(2, 'la tahona', 'granada', 'c/pez 34 2ºB', 37.1636, -3.59615, 14, 2, 1, '9:00-20:00', 1, 0, 0, 0, 1, 1),
+(3, 'kilombo', 'granada', 'c/tiburon 125 3ºA', 37.1788, -3.59223, 12, 3, 2, '8:00-20:00', 1, 0, 1, 1, 1, 0),
+(4, 'gaudi', 'barcelona', 'c/federico garcia lopez 45 bajo B', 41.3643, 2.12451, 20, 18, 4, '10:30-21:00', 0, 1, 0, 1, 0, 1);
 
 -- --------------------------------------------------------
 
