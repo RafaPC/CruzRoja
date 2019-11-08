@@ -11,8 +11,8 @@ function llamada() {
 			},
 			dataType: "json",
 			success: function (response) {
-				if (response.tipo) {
-					window.localStorage.setItem('tipo', "" + response.tipo);
+				if (typeof response.tipo !== "undefined") {
+					window.localStorage.setItem('tipoUser', "" + response.tipo);
 					location.href = "https://localhost/HogarSolidario/CruzRoja/Client/mapa_pisos.html";
 				} else {
 					if (response.error == -1) {

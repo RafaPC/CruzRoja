@@ -32,3 +32,10 @@ input{
 .f{
 	font-size: 2rem !important;
 }
+
+.oculto{
+	display: none;
+}
+#boton{
+	font-size: 20px;
+}

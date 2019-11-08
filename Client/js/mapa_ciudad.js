@@ -67,7 +67,7 @@ function showMap(arrayPisos) {
 			},
 			title: piso.nombre,
 			map: map,
-			icon: "Iconos/Casa.png"
+			icon: "Iconos/home-icon-silhouette(2).png"
 		});
 		markers[i] = marker;
 		marker.addListener('click', function (event) {

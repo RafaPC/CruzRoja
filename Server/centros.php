@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
     $resultado = $conex->query("SELECT * FROM `piso` WHERE `id` ='$id'");
 	$temp = $resultado->fetch_all(MYSQLI_ASSOC);
     if (!sizeof($temp)){
-        die("{error:-2}");
+        die('{"error":-2}');
     }
     else{
         $respuesta = new stdClass();
@@ -16,5 +16,5 @@ if(isset($_GET['id'])){
 		print(json_encode($respuesta));
     }
 }else{
-    die("{error:-1}");
+    die('{"error":-1}');
 }

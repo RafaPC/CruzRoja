@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *'); 
 if(isset($_GET['id'])){
     require_once('conexion_server.php');
     $new_conexion = new ConexionBD();
