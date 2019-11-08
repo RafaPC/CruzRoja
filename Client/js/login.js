@@ -3,8 +3,8 @@ function llamada() {
 	var password = $("#password").val();
 	if (login && password) {
 		$.ajax({
-			type: "get",
-			url: "http://localhost/HogarSolidario/CruzRoja/Server/login.php",
+			type: "post",
+			url: "../Server/login.php",
 			data: {
 				"login": login,
 				"password": password
@@ -13,7 +13,7 @@ function llamada() {
 			success: function (response) {
 				if (typeof response.tipo !== "undefined") {
 					window.localStorage.setItem('tipoUser', "" + response.tipo);
-					location.href = "https://localhost/HogarSolidario/CruzRoja/Client/mapa_pisos.html";
+					location.href = "mapa_pisos.html";
 				} else {
 					if (response.error == -1) {
 						alert("Necesitas rellenar los campos");

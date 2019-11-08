@@ -11,7 +11,7 @@ $(function () {
 	idPiso = window.localStorage.getItem("idPiso");
 	$.ajax({
 		type: "get",
-		url: "http://localhost/HogarSolidario/CruzRoja/Server/centros.php",
+		url: "../Server/centros.php",
 		data: {
 			id: idPiso
 		},
@@ -70,18 +70,19 @@ $(function () {
 
 function updateData() {
 	console.log(datos);
-	$.ajax({
+	alert("Datos actualizados");
+	/*$.ajax({
 		type: "get",
-		url: "http://localhost/HogarSolidario/CruzRoja/Server/modificaciones_vol.php",
+		url: "../Server/modificaciones_vol.php",
 		data: "datos:datos",
 		dataType: "json",
 		success: function (response) {
-
+			alert("Datos actualizados");
 		},
 		error: function () {
 
 		}
-	});
+	});*/
 }
 
 function permitirModificarDatos() {

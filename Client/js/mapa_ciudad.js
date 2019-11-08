@@ -83,7 +83,7 @@ function showMap(arrayPisos) {
 			selectedMarker = i;
 			idPiso = lista_pisos[selectedMarker].id;
 			window.localStorage.setItem("idPiso", "" + idPiso);
-			location.href = "https://localhost/HogarSolidario/CruzRoja/Client/detalles_piso.html";
+			location.href = "detalles_piso.html";
 		});
 	}
 }
