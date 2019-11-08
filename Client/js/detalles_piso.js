@@ -31,7 +31,7 @@ $(function () {
 			if (detalles_piso.ducha == 1) {
 				$("#ducha").attr("src", "iconos/Ducha.png");
 			}
-			if (detalles_piso.movilidad) {
+			if (detalles_piso.movilidad == 1) {
 				$("#movilidad").attr("src", "iconos/Movilidad.png");
 			}
 		},
